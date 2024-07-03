@@ -2,8 +2,10 @@
 #include "../TDD_price_factor/prime_factors.cpp"
 
 using namespace std;
+#include <vector>
 
-TEST(PrimeFactors, PrimeTest) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+TEST(PriceFactors, Of1) {
+	PrimeFactor pf;
+	vector<int> expected = {};
+	EXPECT_EQ(expected, pf.of(1));
 }
