@@ -4,14 +4,19 @@
 using namespace std;
 #include <vector>
 
-TEST(PriceFactors, Of1) {
-	PrimeFactor pf;
+class PrimeFactorsFixture : public testing::Test {
+public:
+	PrimeFactor prime_factor;
 	vector<int> expected = {};
-	EXPECT_EQ(expected, pf.of(1));
+
+};
+
+TEST_F(PrimeFactorsFixture, Of1) {
+	expected = {};
+	EXPECT_EQ(expected, prime_factor.of(1));
 }
 
-TEST(PriceFactors, Of2) {
-	PrimeFactor pf;
-	vector<int> expected = {2};
-	EXPECT_EQ(expected, pf.of(2));
+TEST_F(PrimeFactorsFixture, Of2) {
+	expected = {2};
+	EXPECT_EQ(expected, prime_factor.of(2));
 }
